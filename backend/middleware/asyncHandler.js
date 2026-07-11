@@ -1,0 +1,22 @@
+// ==========================================
+// ASYNC HANDLER
+// ==========================================
+
+const asyncHandler = (controllerFunction) => {
+
+    return (req, res, next) => {
+
+        Promise
+            .resolve(controllerFunction(req, res, next))
+            .catch(next);
+
+    };
+
+};
+
+
+// ==========================================
+// EXPORT ASYNC HANDLER
+// ==========================================
+
+module.exports = asyncHandler;
