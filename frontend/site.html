@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FieldLog | Site Reports</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body data-page="site">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="app-header">
+
+        <div class="header-container">
+
+
+            <!-- BRAND -->
+
+            <a
+                href="./index.html"
+                class="brand"
+            >
+
+                <div class="brand-icon">
+                    🏗
+                </div>
+
+
+                <div class="brand-text">
+
+                    <h1>
+                        FieldLog
+                    </h1>
+
+                    <span>
+                        SITE DAILY REPORTS
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN PAGE
+    ========================================== -->
+
+    <main class="site-page">
+
+
+        <div class="page-container">
+
+
+
+            <!-- =================================
+                 BACK BUTTON
+            ================================== -->
+
+            <a
+                href="./index.html"
+                id="backToReportsButton"
+                class="back-link"
+            >
+
+                <span class="submit-back-arrow">
+                    ←
+                </span>
+
+                <span>
+                    Back to Sites
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================
+                 SITE HERO
+            ================================== -->
+
+            <section class="site-hero">
+
+
+                <!-- SITE INFORMATION -->
+
+                <div class="site-heading">
+
+
+                    <span class="section-eyebrow">
+
+                        <span class="eyebrow-dot">
+                            ●
+                        </span>
+
+                        SITE REPORTS
+
+                    </span>
+
+
+                    <h2 id="siteTitle">
+
+                        Site
+
+                        <span>
+                            Reports.
+                        </span>
+
+                    </h2>
+
+
+                    <p id="siteLocation">
+
+                        Loading construction site details...
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- SUBMIT REPORT BUTTON -->
+
+                <a
+                    href="#"
+                    id="submitReportButton"
+                    class="primary-button site-submit-button"
+                >
+
+                    <span class="button-plus">
+                        +
+                    </span>
+
+                    <span>
+                        Submit Daily Report
+                    </span>
+
+                </a>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 REPORT PANEL
+            ================================== -->
+
+            <section class="reports-panel">
+
+
+
+                <!-- =================================
+                     REPORT TOOLBAR
+                ================================== -->
+
+                <div class="report-toolbar">
+
+
+                    <!-- DATE FILTER -->
+
+                    <div class="date-filter">
+
+
+                        <div class="filter-field">
+
+                            <label for="reportDate">
+
+                                REPORT DATE
+
+                            </label>
+
+
+                            <input
+                                type="date"
+                                id="reportDate"
+                            >
+
+                        </div>
+
+
+
+                        <!-- FIND REPORT -->
+
+                        <button
+                            type="button"
+                            id="findReportButton"
+                            class="secondary-button"
+                        >
+
+                            Find Report
+
+                        </button>
+
+
+
+                        <!-- SHOW ALL -->
+
+                        <button
+                            type="button"
+                            id="showAllButton"
+                            class="text-button"
+                        >
+
+                            Show All
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- REPORT COUNT -->
+
+                    <div
+                        id="reportCount"
+                        class="report-count"
+                    >
+
+                        0 REPORTS
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     DAILY SITE REPORTS
+                ================================== -->
+
+                <div
+                    id="reportsContainer"
+                    class="site-report-list"
+                >
+
+
+                    <!-- LOADING STATE -->
+
+                    <div class="loading-state">
+
+
+                        <div class="loader"></div>
+
+
+                        <p>
+
+                            Loading daily reports...
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         TOAST MESSAGE
+    ========================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="./site.js"></script>
+
+
+</body>
+
+</html>

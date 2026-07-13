@@ -14,9 +14,4 @@ const asyncHandler = (controllerFunction) => {
 
 };
 
-
-// ==========================================
-// EXPORT ASYNC HANDLER
-// ==========================================
-
 module.exports = asyncHandler;

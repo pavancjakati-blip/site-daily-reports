@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>FieldLog | Submit Daily Report</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body data-page="submit">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="app-header">
+
+        <div class="header-container">
+
+
+            <!-- BRAND -->
+
+            <a
+                href="./index.html"
+                class="brand"
+            >
+
+                <div class="brand-icon">
+                    🏗
+                </div>
+
+
+                <div class="brand-text">
+
+                    <h1>
+                        FieldLog
+                    </h1>
+
+                    <span>
+                        SITE DAILY REPORTS
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN PAGE
+    ========================================== -->
+
+    <main class="submit-page">
+
+        <div class="page-container">
+
+
+            <!-- =================================
+                 BACK BUTTON
+            ================================== -->
+
+            <a
+                href="./index.html"
+                id="backToReportsButton"
+                class="submit-back-button"
+            >
+                <span class="submit-back-arrow">
+                    ←
+                </span>
+
+                <span>
+                    Back to Sites
+                </span>
+            </a>
+
+
+
+            <!-- =================================
+                 PAGE HERO
+            ================================== -->
+
+            <section class="submit-hero">
+
+
+                <div class="submit-heading">
+
+                    <span class="section-eyebrow">
+
+                        <span class="eyebrow-dot">
+                            ●
+                        </span>
+
+                        DAILY FIELD ENTRY
+
+                    </span>
+
+
+                    <h2>
+                        Submit Daily
+                        <span>
+                            Report.
+                        </span>
+                    </h2>
+
+
+                    <p>
+                        Record today's workforce, completed work
+                        and blockers affecting construction progress.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 REPORT FORM CARD
+            ================================== -->
+
+            <section class="submit-form-card">
+
+
+                <!-- FORM CARD HEADER -->
+
+                <div class="submit-card-header">
+
+
+                    <div class="submit-card-title">
+
+                        <span class="submit-card-eyebrow">
+                            FIELD REPORT
+                        </span>
+
+                        <h3>
+                            Daily Work Details
+                        </h3>
+
+                        <p>
+                            Complete the report information below.
+                            Fields marked with * are required.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- CURRENT SITE -->
+
+                    <div class="current-site-box">
+
+                        <span>
+                            CURRENT SITE
+                        </span>
+
+                        <strong id="submitSiteTitle">
+                            Loading site...
+                        </strong>
+
+                        <p id="submitSiteLocation">
+                            Loading location...
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     FORM
+                ================================== -->
+
+                <form id="reportForm">
+
+
+                    <div class="submit-form-body">
+
+
+                        <!-- TOP TWO COLUMN FIELDS -->
+
+                        <div class="submit-form-grid">
+
+
+                            <!-- REPORT DATE -->
+
+                            <div class="submit-field">
+
+                                <label for="reportDate">
+
+                                    REPORT DATE
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <input
+                                    type="date"
+                                    id="reportDate"
+                                    name="report_date"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- WORKERS -->
+
+                            <div class="submit-field">
+
+                                <label for="workersPresent">
+
+                                    WORKERS PRESENT
+
+                                    <span>*</span>
+
+                                </label>
+
+
+                                <input
+                                    type="number"
+                                    id="workersPresent"
+                                    name="workers_present"
+                                    min="0"
+                                    placeholder="Example: 12"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- WORK DONE -->
+
+                        <div class="submit-field submit-field-large">
+
+                            <label for="workDone">
+
+                                WORK DONE
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <textarea
+                                id="workDone"
+                                name="work_done"
+                                rows="5"
+                                placeholder="Describe the work completed today..."
+                                required
+                            ></textarea>
+
+
+                            <p class="submit-field-help">
+
+                                Describe completed work and current progress.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- BLOCKERS -->
+
+                        <div class="submit-field submit-field-large">
+
+                            <label for="blockers">
+
+                                BLOCKERS / ISSUES
+
+                            </label>
+
+
+                            <textarea
+                                id="blockers"
+                                name="blockers"
+                                rows="4"
+                                placeholder="Record delays, material issues or other blockers..."
+                            ></textarea>
+
+
+                            <p class="submit-field-help">
+
+                                If there are no blockers, you may leave this empty.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- SUBMITTED BY -->
+
+                        <div class="submit-field">
+
+                            <label for="submittedBy">
+
+                                SUBMITTED BY
+
+                                <span>*</span>
+
+                            </label>
+
+
+                            <input
+                                type="text"
+                                id="submittedBy"
+                                name="submitted_by"
+                                placeholder="Enter your name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         FORM ACTIONS
+                    ================================== -->
+
+                    <div class="submit-form-actions">
+
+
+                        <a
+                            href="#"
+                            id="cancelReportButton"
+                            class="submit-cancel-button"
+                        >
+
+                            Cancel
+
+                        </a>
+
+
+                        <button
+                            type="submit"
+                            id="submitButton"
+                            class="submit-report-button"
+                        >
+
+                            <span>
+                                +
+                            </span>
+
+                            Submit Daily Report
+
+                        </button>
+
+
+                    </div>
+
+
+                </form>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         TOAST
+    ========================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FieldLog | Construction Sites</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar-container">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🏗
+                </div>
+
+                <div class="brand-text">
+                    <h1>FieldLog</h1>
+                    <span>SITE DAILY REPORTS</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="page-container">
+
+        <section class="page-hero">
+
+            <div class="hero-content">
+
+                <div class="section-label">
+                    <span class="label-dot"></span>
+                    SITE DIRECTORY
+                </div>
+
+                <h2>
+                    Construction
+                    <span>Sites.</span>
+                </h2>
+
+                <p>
+                    Select a construction site to review its daily field reports,
+                    workforce updates and recorded blockers.
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                id="openSiteModal"
+                type="button"
+            >
+                <span>+</span>
+                Add New Site
+            </button>
+
+        </section>
+
+
+        <!-- SITE DIRECTORY -->
+        <section class="directory-card">
+
+            <div class="directory-toolbar">
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="siteSearch"
+                        placeholder="Search sites or locations..."
+                    >
+
+                </div>
+
+                <div class="site-count">
+                    SHOWING
+                    <strong id="visibleSiteCount">0</strong>
+                    OF
+                    <strong id="totalSiteCount">0</strong>
+                    SITES
+                </div>
+
+            </div>
+
+
+            <div id="sitesContainer" class="sites-container">
+
+                <div class="loading-state">
+
+                    <div class="loader"></div>
+
+                    <p>Loading construction sites...</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ADD SITE MODAL -->
+    <div class="modal-overlay" id="siteModal">
+
+        <div class="modal-card">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+                        NEW PROJECT SITE
+                    </span>
+
+                    <h3>Add Construction Site</h3>
+
+                </div>
+
+                <button
+                    class="modal-close"
+                    id="closeSiteModal"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="siteForm">
+
+                <div class="form-group">
+
+                    <label for="siteName">
+                        SITE NAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="siteName"
+                        placeholder="Example: Embassy Tech Village"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="siteLocation">
+                        LOCATION
+                    </label>
+
+                    <input
+                        type="text"
+                        id="siteLocation"
+                        placeholder="Example: Bellandur, Bengaluru"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        class="secondary-button"
+                        id="cancelSiteModal"
+                        type="button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        type="submit"
+                    >
+                        Create Site
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
