@@ -1779,11 +1779,27 @@ async function submitDailyReport(
 
         if (!response.ok) {
 
-            const errorText =
-                await response.text();
+            let errorMessage = "Unable to submit the daily report.";
 
+            try {
 
-            throw new Error(errorText);
+                const data = await response.json();
+
+                errorMessage = data.message || data.error || errorMessage;
+
+            } catch (jsonErr) {
+
+                try {
+
+                    const text = await response.text();
+
+                    if (text) errorMessage = text;
+
+                } catch (textErr) {}
+
+            }
+
+            throw new Error(errorMessage);
 
         }
 
@@ -1815,7 +1831,7 @@ async function submitDailyReport(
 
 
         showReportMessage(
-            "Unable to submit the daily report.",
+            error.message || "Unable to submit the daily report.",
             true
         );
 
