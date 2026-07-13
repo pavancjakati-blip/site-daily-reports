@@ -1861,38 +1861,7 @@ function showReportMessage(
     isError
 ) {
 
-    const messageBox =
-        document.getElementById(
-            "reportMessage"
-        );
-
-
-    if (!messageBox) {
-
-        return;
-
-    }
-
-
-    messageBox.textContent =
-        message;
-
-
-    messageBox.classList.remove(
-        "hidden"
-    );
-
-
-    messageBox.classList.toggle(
-        "error",
-        isError
-    );
-
-
-    messageBox.classList.toggle(
-        "success",
-        !isError
-    );
+    showToast(message, isError);
 
 }
 
@@ -2076,7 +2045,7 @@ function showReportsError(message) {
 let toastTimer;
 
 
-function showToast(message) {
+function showToast(message, isError = false) {
 
     const toast =
         document.getElementById(
@@ -2096,6 +2065,14 @@ function showToast(message) {
 
     toast.textContent =
         message;
+
+
+    toast.classList.remove("error", "success");
+    if (isError) {
+        toast.classList.add("error");
+    } else {
+        toast.classList.add("success");
+    }
 
 
     toast.classList.add("show");

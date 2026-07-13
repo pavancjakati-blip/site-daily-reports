@@ -4,7 +4,7 @@ FieldLog is a clean, modern, full-stack web application designed for constructio
 
 ---
 
-## 🏗 Features
+## Features
 
 - **Site Directory**: Searchable list of all construction project sites with dynamic project count indicators.
 - **Add Construction Sites**: Instantly add new sites with name and location details via a responsive overlay.

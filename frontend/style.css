@@ -1302,6 +1302,16 @@ main.page-container {
     transform: translateY(0);
 }
 
+.toast.error {
+    background: #ef4444 !important;
+    color: #ffffff !important;
+}
+
+.toast.success {
+    background: #22c55e !important;
+    color: #ffffff !important;
+}
+
 
 /* =========================================
    RESPONSIVE
